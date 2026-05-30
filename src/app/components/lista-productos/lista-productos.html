@@ -1,0 +1,44 @@
+<div class="contenedor">
+
+  <h1>Gestión de Productos</h1>
+
+  <!-- FORMULARIO AGREGAR PRODUCTO -->
+  <div class="formulario">
+    <h2>Agregar producto</h2>
+    <input
+      type="text"
+      placeholder="Nombre del producto"
+      [(ngModel)]="nuevoNombre"
+    />
+    <input
+      type="number"
+      placeholder="Precio"
+      [(ngModel)]="nuevoPrecio"
+    />
+    <button (click)="agregar()">Agregar</button>
+  </div>
+
+  <!-- MENSAJE LISTA VACÍA -->
+  <p class="vacio" *ngIf="productos.length === 0">
+    No hay productos disponibles.
+  </p>
+
+  <!-- LISTA DE PRODUCTOS -->
+  <div class="lista" *ngIf="productos.length > 0">
+    <div class="producto" *ngFor="let producto of productos">
+
+      <div class="producto-info">
+        <h3>{{ producto.nombre }}</h3>
+        <p>Precio: {{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
+        <p>Precio con 15% de descuento: {{ producto.precio | descuento:15 | currency:'ARS':'symbol':'1.0-0' }}</p>
+        <p>Fecha de alta: {{ producto.fechaAlta | date:'dd/MM/yyyy' }}</p>
+      </div>
+
+      <button class="btn-eliminar" (click)="eliminar(producto.id)">
+        Eliminar
+      </button>
+
+    </div>
+  </div>
+
+</div>
