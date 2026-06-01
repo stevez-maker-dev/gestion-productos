@@ -37,6 +37,25 @@ Precio final: $72.250
 
 ---
 
+## Capturas de pantalla
+
+### Lista de productos cargada
+![Lista de productos](public/capturas/ListaProductosCargada.png)
+
+### Pipe estándar en funcionamiento
+![Pipe estandar](public/capturas/PipesEstandarEnFuncionamiento.png)
+
+### Pipe personalizado descuento
+![Pipe personalizado](public/capturas/PipePersonalizadoDescuento.png)
+
+### Agregar nuevo producto
+![Agregar nuevo producto](public/capturas/AgregoNuevoProducto.png)
+
+### Lista sin productos
+![Eliminar todos los productos](public/capturas/ListaSinProductos.png)
+
+---
+
 ## Créditos
 - Autor: Sebastian Tevez
 - Curso: Angular — Centro de e-Learning UTN BA
